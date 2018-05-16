@@ -270,7 +270,13 @@ function scanCode()
                 "Result: " + result.text + "\n" +
                 "Format: " + result.format + "\n" +
                 "Cancelled: " + result.cancelled);
-          GetSource();
+	     if(result.text=='' && result.cancelled==false ){
+		    showAlert('Escaneo cancelado');
+		    }
+	      else{
+		      GetSource();
+	      }
+          
             
       },
 
